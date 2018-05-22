@@ -13,16 +13,18 @@ import { FooterComponent } from './footer/footer.component';
 const appRoutes: Routes = [
   {
     path: 'login',
-    component: LoginComponent,
-    data: { title: 'Login' }
+    component: LoginComponent
   },
   {
     path: 'signup',
-    component: SignupComponent,
-    data: { title: 'SignUp' }
+    component: SignupComponent
+  },
+  {
+    path: 'home',
+    component: HomeComponent
   },
   { path: '',
-    redirectTo: '/login',
+    redirectTo: '/signup',
     pathMatch: 'full'
   }
 ];
