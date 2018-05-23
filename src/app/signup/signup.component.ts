@@ -15,7 +15,8 @@ export class SignupComponent implements OnInit {
   ngOnInit() {
   }
   registerUser() {
-    // this.http.post('/user/signup', this.user)
+    console.log(this.user);
+    // this.http.post('localhost:8080/vsign-api/signup/register', this.user)
     //   .subscribe(res => {
     //     console.log('signup');
     //       this.router.navigate(['/home']);
