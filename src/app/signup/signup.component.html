@@ -1,7 +1,11 @@
 <div class="container">  
-  <h3>SignUp Here!</h3>
+ 
   <div class="row">
     <div class="col-md-6">
+      <div class="signup-box">
+        <div class="signup-title">
+          <h3>Create an account!</h3>
+        </div>  
       <form (ngSubmit)="registerUser()" #signupForm="ngForm">
         
         <div class="form-group">
@@ -66,6 +70,14 @@
           <p>Already have account with us ? <a routerLink="/login">Login here</a> </p>
         </div>
       </form>
+    </div>  
+    </div>
+    <div class="col-md-2"></div>
+    <div class="col-md-4">
+      <div class="signup-content-box">
+        <h3>Benifits With <strong>Vision</strong>...</h3>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+      </div>
     </div>
   </div>
 </div>
