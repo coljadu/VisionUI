@@ -13,6 +13,7 @@ export class SignupComponent implements OnInit {
   constructor(private http: HttpClient, private router: Router) { }
 
   ngOnInit() {
+    this.getStatesList();
   }
   registerUser() {
     console.log(this.user);
@@ -26,5 +27,23 @@ export class SignupComponent implements OnInit {
     //   );
     this.router.navigate(['/home']);
   }
+  getStatesList() {
+    this.http.get('http://localhost:8080/vsign-api/location/country/1/states')
+      .subscribe(res => {
+        console.log(res);
+        }, (err) => {
+          console.log(err);
+        }
+      );
+  }
+  getCityList(StateId) {
+    this.http.get('http://localhost:8080/vsign-api/location/states/'+StateId+'/cities')
+      .subscribe(res => {
+        console.log(res);
+        }, (err) => {
+          console.log(err);
+        }
+      );
+  }  
 
 }
