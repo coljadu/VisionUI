@@ -1,0 +1,12 @@
+.cart-container{
+    min-height:600px;
+    margin-top:60px;
+}
+.cart-title{
+    margin:0 auto;
+    display:block;
+    text-align:center;
+}
+.cart-table thead{
+    background-color: #ddd;
+}
