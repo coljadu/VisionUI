@@ -64,25 +64,22 @@
                     <label for="country">Country</label>
                         <select class="form-control" name="country" [(ngModel)]="user.countryId" required>
                           <option value="1">India</option>
-                          <option value="2">Usa</option>
                         </select>
                   </div>
             </div>
             <div class="col-md-4">
                 <div class="form-group">
                     <label for="state">State</label>
-                        <select class="form-control" name="state" [(ngModel)]="user.stateId" required>
-                          <option value="1">MP</option>
-                          <option value="2">UP</option>
+                        <select class="form-control" name="state" [(ngModel)]="user.stateId" ng-change='' required>
+                          <option *ngFor="let state of stateList" (click)="getCityList()"  value="{{state.id}}">{{state.name}}</option>
                         </select>
                   </div>
             </div>
             <div class="col-md-4">
                 <div class="form-group">
                     <label for="city">City</label>
-                        <select class="form-control" name="city" [(ngModel)]="user.cityId" required>
-                          <option value="1">Bhopal</option>
-                          <option value="2">Indore</option>
+                        <select  class="form-control" name="city" [(ngModel)]="user.cityId" required>
+                          <option *ngFor="let city of cityList" value="{{city.id}}">{{city.name}}</option>
                         </select>
                   </div> 
             </div>
