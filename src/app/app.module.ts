@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { CartComponent } from './cart/cart.component';
+import { PlansComponent } from './plans/plans.component';
 
 const appRoutes: Routes = [
   {
@@ -28,6 +29,10 @@ const appRoutes: Routes = [
     path: 'cart',
     component: CartComponent
   },
+  {
+    path: 'plans',
+    component: PlansComponent
+  },
   { path: '',
     redirectTo: '/signup',
     pathMatch: 'full'
@@ -43,7 +48,8 @@ const appRoutes: Routes = [
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    CartComponent
+    CartComponent,
+    PlansComponent
   ],
   imports: [
     BrowserModule,

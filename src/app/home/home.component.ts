@@ -16,8 +16,8 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getUserInfo();
-    this.getPlanInfo();
+    //this.getUserInfo();
+    //this.getPlanInfo();
   }
   getUserInfo() {
     this.name = 'Ram';
@@ -25,8 +25,8 @@ export class HomeComponent implements OnInit {
   getPlanInfo(){
     this.http.get('http://localhost:8080/vsign-api/product/plans?status=ACTIVE')
       .subscribe(res => {
-        console.log(res.data);
-        this.plans = res.data;
+        //console.log(res.data);
+        //this.plans = res.data;
 
       })
   }
