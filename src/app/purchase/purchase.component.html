@@ -1,0 +1,23 @@
+<div class="container-fluid">
+    <h3>Purchase Form</h3>
+    <div class="row">
+      <div class="form-group">
+        <label for="machineId">Machine Id</label>
+        <input type="text" class="form-control" [(ngModel)]="purchaseData.machineId" name="machineId" placeholder='please Enter unique Machine ID' required>
+      </div> 
+    </div>
+    <div class="row">
+      <div>
+          <h4>choose a Plan</h4>
+      </div>
+      <div *ngFor="let plan of Plans" class="col-sm-3" (click)="style='background:green;'">
+            <div class="planBox">
+              <p><b>Name:</b> {{plan.planName}}</p>
+              <p><b>Duration:</b>{{plan.durationinMonths}} Months</p>
+              <p><b>Price:</b> {{plan.planPrice}}</p>
+              <p><b>Status:</b> {{plan.planName}}</p>
+            </div>
+      </div>
+    </div>
+
+</div>

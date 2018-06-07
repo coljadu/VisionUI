@@ -11,6 +11,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { CartComponent } from './cart/cart.component';
 import { PlansComponent } from './plans/plans.component';
+import { PurchaseComponent } from './purchase/purchase.component';
 
 const appRoutes: Routes = [
   {
@@ -33,6 +34,10 @@ const appRoutes: Routes = [
     path: 'plans',
     component: PlansComponent
   },
+  {
+    path: 'purchase',
+    component: PurchaseComponent
+  },
   { path: '',
     redirectTo: '/signup',
     pathMatch: 'full'
@@ -49,7 +54,8 @@ const appRoutes: Routes = [
     HeaderComponent,
     FooterComponent,
     CartComponent,
-    PlansComponent
+    PlansComponent,
+    PurchaseComponent
   ],
   imports: [
     BrowserModule,
