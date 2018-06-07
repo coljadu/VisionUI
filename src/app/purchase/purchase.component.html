@@ -1,23 +1,34 @@
 <div class="container-fluid">
     <h3>Purchase Form</h3>
-    <div class="row">
-      <div class="form-group">
-        <label for="machineId">Machine Id</label>
-        <input type="text" class="form-control" [(ngModel)]="purchaseData.machineId" name="machineId" placeholder='please Enter unique Machine ID' required>
-      </div> 
-    </div>
-    <div class="row">
-      <div>
-          <h4>choose a Plan</h4>
+    <div class="main-container">
+      <div class='machineid-section'>
+          <div>
+              <h4>Enter Machine ID</h4>
+          </div>
+          <input type="text" class="form-control" [(ngModel)]="purchaseData.machineId" name="machineId" placeholder='please Enter unique Machine ID' required>
       </div>
-      <div *ngFor="let plan of Plans" class="col-sm-3" (click)="style='background:green;'">
-            <div class="planBox">
-              <p><b>Name:</b> {{plan.planName}}</p>
-              <p><b>Duration:</b>{{plan.durationinMonths}} Months</p>
-              <p><b>Price:</b> {{plan.planPrice}}</p>
-              <p><b>Status:</b> {{plan.planName}}</p>
+      <div class='plan-section'>
+          <div>
+              <h4>Choose a Plan</h4>
+          </div>
+          <select name="plan" id="planList" class='plan-list' [(ngModel)]='selectedPlan'>
+            <option value="select">select a plan</option>
+            <option *ngFor="let plan of Plans" [ngValue]="plan">{{plan.planName}}</option>
+          </select>
+          <div class="planBox">
+            <div>
+                <span class='.width-50'><b>Name:</b> {{selectedPlan.planName}}</span>
+                <span class='.width-50'><b>Duration:</b>{{selectedPlan.durationinMonths}} Months</span>
             </div>
-      </div>
+            <div>
+                <span class='.width-50'><b>Price:</b> {{selectedPlan.planPrice}}</span>
+                <span class='.width-50'><b>Status:</b> {{selectedPlan.planName}}</span>
+            </div>  
+          </div>
+      </div>  
+        
+       
     </div>
+    
 
 </div>

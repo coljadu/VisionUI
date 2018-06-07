@@ -11,6 +11,7 @@ export class PurchaseComponent implements OnInit {
   
   purchaseData = {};
   Plans:any = [];
+  selectedPlan = {};
   constructor(private http: HttpClient, private router: Router) {
     
    }
@@ -20,7 +21,7 @@ export class PurchaseComponent implements OnInit {
   }
 
   getPlans() {
-    this.http.get('https://stupid-stingray-78.localtunnel.me/vsign-api/product/plans?status=ACTIVE')
+    this.http.get('https://gentle-badger-89.localtunnel.me/vsign-api/product/plans?status=ACTIVE')
       .subscribe(res => {
         console.log(res);
         this.Plans = res;
