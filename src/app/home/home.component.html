@@ -1,14 +1,6 @@
 <div class="container">
-    <h3>Welcome {{this.name}}</h3>
-    <div class="select-plan">
-        <input type="text" name="machineId" id="machineId" placeholder="Please enter machine Id">
-        <div>
-            <select name="plan" id="planId">
-                <option *ngFor="let plan of plans" value=plan.id>{{plan.planName}}</option>
-            </select>   
-        </div>
-        <button>Purchase</button>
-    </div>
+    <h3>Welcome {{this.name}}</h3> 
+    <button>Purchase</button>
 </div>
 
 

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { NgIf } from '@angular/common';
+import {  NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-home',
@@ -12,13 +12,15 @@ export class HomeComponent implements OnInit {
   name = "";
   plans = [];
   constructor(private http: HttpClient, private router: Router) { 
-    
+  
   }
 
   ngOnInit() {
     //this.getUserInfo();
     //this.getPlanInfo();
   }
+
+    
   getUserInfo() {
     this.name = 'Ram';
   }

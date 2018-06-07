@@ -1,5 +1,12 @@
 .vision-logo {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-transform: capitalize;
-    font-weight: 600;   
+  
+}
+
+.nav-item-group{
+    margin-left: 8%;
+    font-size: 20px;
+}
+
+.nav-item {
+    margin-left: 10%;
 }
