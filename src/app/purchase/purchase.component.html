@@ -5,7 +5,7 @@
           <div>
               <h4>Enter Machine ID</h4>
           </div>
-          <input type="text" class="form-control" [(ngModel)]="purchaseData.machineId" name="machineId" placeholder='please Enter unique Machine ID' required>
+          <input type="text" class="form-control" [(ngModel)]="machineId" name="machineId" placeholder='please Enter unique Machine ID' required>
       </div>
       <div class='plan-section'>
           <div>
@@ -16,16 +16,19 @@
             <option *ngFor="let plan of Plans" [ngValue]="plan">{{plan.planName}}</option>
           </select>
           <div class="planBox">
-            <div>
-                <span class='.width-50'><b>Name:</b> {{selectedPlan.planName}}</span>
-                <span class='.width-50'><b>Duration:</b>{{selectedPlan.durationinMonths}} Months</span>
+            <div class='row'>
+                <div class='col-sm-6'><b>Name:</b> {{selectedPlan.planName}}</div>
+                <div class='col-sm-6'><b>Duration(In Months):</b>{{selectedPlan.durationinMonths}}</div>
             </div>
-            <div>
-                <span class='.width-50'><b>Price:</b> {{selectedPlan.planPrice}}</span>
-                <span class='.width-50'><b>Status:</b> {{selectedPlan.planName}}</span>
+            <div class='row'>
+                <span class='col-sm-6'><b>Price:</b> {{selectedPlan.planPrice}}</span>
+                <span class='col-sm-6'><b>Status:</b> {{selectedPlan.planName}}</span>
             </div>  
           </div>
       </div>  
+      <div class="submission">
+          <button class='btn btn-primary' (click)='intitPurchase()'>Submit</button>
+      </div>
         
        
     </div>

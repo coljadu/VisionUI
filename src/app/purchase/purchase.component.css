@@ -23,4 +23,8 @@
 }
 .width-50 {
     width: 50%;
+    display: inline;
+}
+.submission{
+    text-align: center;
 }
