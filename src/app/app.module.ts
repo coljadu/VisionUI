@@ -12,6 +12,7 @@ import { FooterComponent } from './footer/footer.component';
 import { CartComponent } from './cart/cart.component';
 import { PlansComponent } from './plans/plans.component';
 import { PurchaseComponent } from './purchase/purchase.component';
+import {AuthService} from './core/services/auth.service'
 
 const appRoutes: Routes = [
   {
@@ -66,7 +67,7 @@ const appRoutes: Routes = [
       { enableTracing: true } // <-- debugging purposes only
     )
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
