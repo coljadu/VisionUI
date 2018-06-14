@@ -17,7 +17,7 @@ export class AuthService {
     let config = {
         headers: {
             "Authorization": "Bearer " + _accessToken,
-            'Content-Type' : 'application/x-www-form-urlencoded'
+            'Content-Type' : 'application/json'
         }
     };
 
