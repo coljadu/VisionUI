@@ -5,6 +5,6 @@
 
 export const environment = {
   production: false,
-  api_url: 'https://brown-liger-27.localtunnel.me/vsign-api'
+  api_url: 'http://18.221.96.111:8080/vsign-api/'
   //api_url: 'localhost:8080/vsign-api'
 };
