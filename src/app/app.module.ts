@@ -12,7 +12,9 @@ import { FooterComponent } from './footer/footer.component';
 import { CartComponent } from './cart/cart.component';
 import { PlansComponent } from './plans/plans.component';
 import { PurchaseComponent } from './purchase/purchase.component';
-import {AuthService} from './core/services/auth.service'
+import {AuthService} from './core/services/auth.service';
+import {AuthGuardService} from './auth-guard.service';
+
 
 const appRoutes: Routes = [
   {
@@ -29,7 +31,8 @@ const appRoutes: Routes = [
   },
   {
     path: 'cart',
-    component: CartComponent
+    component: CartComponent,
+    canActivate: [AuthGuardService],
   },
   {
     path: 'plans',
@@ -67,7 +70,7 @@ const appRoutes: Routes = [
       { enableTracing: true } // <-- debugging purposes only
     )
   ],
-  providers: [AuthService],
+  providers: [AuthService, AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

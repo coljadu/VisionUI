@@ -43,6 +43,7 @@ export class PurchaseComponent implements OnInit {
     this.http.post(environment.api_url+'/customers/initiateOrder',puchasedData,config)
       .subscribe(res => {
         console.log(res);
+        this.router.navigate(['/cart']);
       }, (err) => {
         console.log(err);
       })
